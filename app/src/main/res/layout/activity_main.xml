@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quiz_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="kotlinapp.circus.com.kotlinapplication.MainActivity">
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Question"
+        android:textSize="@dimen/qustion_size"/>
+
+    <TextView
+        android:id="@+id/question_country_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:text="Country"
+        android:textSize="@dimen/qustion_size"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/answer_one"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"/>
+
+            <Button
+                android:id="@+id/answer_two"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/answer_three"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"/>
+
+            <Button
+                android:id="@+id/answer_four"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginRight="30dp"
+            android:drawableLeft="@drawable/arrow_left"
+            android:text="@string/prev_button"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="@string/next_button"
+            android:textSize="20dp"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+
