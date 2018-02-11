@@ -32,50 +32,50 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setButton() {
-        prev_button.setOnClickListener(View.OnClickListener {
+        prev_button.setOnClickListener {
             mCurrentIndex = mCurrentIndex - 1
             if (mCurrentIndex < 0) {
                 mCurrentIndex = mCountryList.mQuestions.size - 1
             }
             updateQuestion()
-        })
+        }
 
-        next_button.setOnClickListener(View.OnClickListener {
+        next_button.setOnClickListener {
             mCurrentIndex = (mCurrentIndex + 1) % mCountryList.mQuestions.size
             updateQuestion()
-        })
+        }
 
-        answer_one.setOnClickListener(View.OnClickListener {
+        answer_one.setOnClickListener {
             if (resources.getString(mCountryList.mQuestions[mCurrentIndex].capital) == resources.getString(mCountryList.mQuestions[mAnswer.get(0)].capital)) {
                 Toast.makeText(applicationContext, R.string.answer_true, Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(applicationContext, R.string.answer_false, Toast.LENGTH_SHORT).show()
             }
-        })
+        }
 
-        answer_two.setOnClickListener(View.OnClickListener {
+        answer_two.setOnClickListener {
             if (resources.getString(mCountryList.mQuestions[mCurrentIndex].capital) == resources.getString(mCountryList.mQuestions[mAnswer.get(1)].capital)) {
                 Toast.makeText(applicationContext, R.string.answer_true, Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(applicationContext, R.string.answer_false, Toast.LENGTH_SHORT).show()
             }
-        })
+        }
 
-        answer_three.setOnClickListener(View.OnClickListener {
+        answer_three.setOnClickListener {
             if (resources.getString(mCountryList.mQuestions[mCurrentIndex].capital) == resources.getString(mCountryList.mQuestions[mAnswer.get(2)].capital)) {
                 Toast.makeText(applicationContext, R.string.answer_true, Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(applicationContext, R.string.answer_false, Toast.LENGTH_SHORT).show()
             }
-        })
+        }
 
-        answer_four.setOnClickListener(View.OnClickListener {
+        answer_four.setOnClickListener {
             if (resources.getString(mCountryList.mQuestions[mCurrentIndex].capital) == resources.getString(mCountryList.mQuestions[mAnswer.get(3)].capital)) {
                 Toast.makeText(applicationContext, R.string.answer_true, Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(applicationContext, R.string.answer_false, Toast.LENGTH_SHORT).show()
             }
-        })
+        }
     }
 
     private fun setQuestionNumber() {
